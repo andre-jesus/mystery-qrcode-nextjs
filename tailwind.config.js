@@ -11,7 +11,7 @@ module.exports = {
         'qr-green': '#14F195',
       },
       fontFamily: {
-        'orbitron': ['Orbitron', 'sans-serif'],
+        orbitron: ['var(--font-orbitron)', 'sans-serif'],
       },
     },
   },

@@ -5,17 +5,16 @@ import Navbar from '@/components/layout/Navbar'
 import WalletInput from '@/components/ui/WalletInput'
 import MessageDisplay from '@/components/ui/MessageDisplay'
 
-// Dynamically import the Scene component with SSR disabled
 const Scene = dynamic(() => import('@/components/three/Scene'), { ssr: false })
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative">
+    <main className="min-h-screen relative overflow-hidden">
       <Scene />
       <div className="relative z-10">
         <Navbar />
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="container mx-auto px-4 pt-20"> {/* Added padding top */}
+          <div className="flex flex-col items-center gap-72"> {/* Adjusted gap */}
             <MessageDisplay />
             <WalletInput />
           </div>
